@@ -41,6 +41,7 @@ def generate_text(start_word, num_words):
         
         #Here is where we set up the conditions for a period or a comma to be added. 
         #There is a 20 percent chance of a period being added when the sentence is 5 or more characters, and a ten percent chance of a comma being added. 
+        #We will also reset our sentence length to 0 to reset the count.
         if sentence_length >= 5 and random.random() < 0.2:
             period = True
             result[-1] += "."
